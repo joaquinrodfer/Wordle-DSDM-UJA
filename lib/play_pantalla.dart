@@ -17,6 +17,7 @@ class _PlayPantallaState extends State<PlayPantalla> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Container(
         alignment: Alignment.center,
           child: Column(
