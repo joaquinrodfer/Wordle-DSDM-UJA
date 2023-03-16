@@ -83,7 +83,7 @@ class WordleTema {
     return ThemeData(
       scaffoldBackgroundColor: Colors.white,
       brightness: Brightness.light,
-      primaryColor: Colors.white70,
+      primaryColor: Colors.white,
       primaryColorDark: Colors.grey[850],
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
