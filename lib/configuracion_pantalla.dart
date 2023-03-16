@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:wordle/configuracion_opcion.dart';
+import 'configuracion_letras_pantalla.dart';
+import 'package:wordle/configuracion_intentos_pantalla.dart';
 
 class ConfiguracionPantalla extends StatelessWidget {
+  final _longitudPalabra = [4,5,6];
+  int _idLongitudPalabras = 0;
+  final _numeroIntentos = [4,5,6,7,8];
+  int _idNumeroIntentos = 0;
+
   final _opciones = <ConfiguracionOpcion>[
     const ConfiguracionOpcion(
       titulo: 'Número de letras',
@@ -21,13 +28,10 @@ class ConfiguracionPantalla extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Container(
-            child: IconButton(
-              icon: Icon(
-                Icons.settings,
-                color: Theme.of(context).primaryColorDark,
-                size: 40,
-              ),
-              onPressed: (){},
+            child: Icon(
+              Icons.settings,
+              color: Theme.of(context).primaryColorDark,
+              size: 40,
             )
         ),
         elevation: 0,
@@ -38,9 +42,31 @@ class ConfiguracionPantalla extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
-            _opciones[0],
+            InkWell(
+              child: _opciones[0],
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) {
+                          return ConfiguracionLetrasPantalla();
+                        }
+                    )
+                );
+              },
+            ),
             const SizedBox(height: 5,),
-            _opciones[1]
+            InkWell(
+              child: _opciones[1],
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return ConfiguracionIntentosPantalla();
+                    })
+                );
+              },
+            ),
           ],
         )
       ),

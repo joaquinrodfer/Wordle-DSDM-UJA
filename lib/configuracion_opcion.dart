@@ -15,7 +15,7 @@ class ConfiguracionOpcion extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(5)),
           color: Colors.grey[600],
         ),
-        height: 90.0,
+        height: 110.0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[

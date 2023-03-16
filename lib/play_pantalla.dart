@@ -8,12 +8,6 @@ class PlayPantalla extends StatefulWidget {
 }
 
 class _PlayPantallaState extends State<PlayPantalla> {
-  final _longitudPalabra = [4,5,6];
-  int _idLongitudPalabras = 0;
-  final _numeroIntentos = [4,5,6,7,8];
-  int _idNumeroIntentos = 0;
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
