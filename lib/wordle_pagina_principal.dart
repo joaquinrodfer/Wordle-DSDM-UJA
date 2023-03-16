@@ -40,7 +40,7 @@ class _WordlePaginaPrincipalState extends State<WordlePaginaPrincipal> {
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.ease,
         animationDuration: Duration(milliseconds: 350),
-        backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor!,
         color: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
         height: 60,
         index: _categoriaActiva,
