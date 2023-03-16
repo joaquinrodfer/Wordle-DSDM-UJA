@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordle/playing_pantalla.dart';
 
 class PlayPantalla extends StatefulWidget {
   const PlayPantalla({Key? key}) : super(key: key);
@@ -29,7 +30,16 @@ class _PlayPantallaState extends State<PlayPantalla> {
                   child: FloatingActionButton(
                       elevation: 5,
                       highlightElevation: 20,
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                            MaterialPageRoute(
+                                builder: (context) {
+                                  return PlayingPantalla();
+                                }
+                            )
+                        );
+                      },
                       child: Icon(Icons.play_arrow,size: 100,color: Theme.of(context).iconTheme.color, )
                   )
               ),
