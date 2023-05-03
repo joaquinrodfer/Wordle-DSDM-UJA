@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:wordle/configuracion_pantalla.dart';
 
 class ConfiguracionLetrasPantalla extends StatefulWidget {
-  String _numeroLetras = "5";
+  final String _numeroLetras = "5";
   String get numeroLetras => _numeroLetras;
 
-  ConfiguracionLetrasPantalla({Key? key}) : super(key: key);
+  const ConfiguracionLetrasPantalla({Key? key}) : super(key: key);
 
   @override
   State<ConfiguracionLetrasPantalla> createState() => _ConfiguracionLetrasPantallaState();
@@ -16,7 +16,6 @@ class ConfiguracionLetrasPantalla extends StatefulWidget {
 class _ConfiguracionLetrasPantallaState extends State<ConfiguracionLetrasPantalla> {
 
   String dropdownValue = "4";
-  final valoresAEscoger = [4, 5, 6, 7, 8];
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +30,14 @@ class _ConfiguracionLetrasPantallaState extends State<ConfiguracionLetrasPantall
                 //Text('Número de letras',style: Theme.of(context).primaryTextTheme.displaySmall),
                 const Center(
                   child: Text("Escoge el número de letras", style: TextStyle(
-                    fontSize: 20
+                    fontSize: 30
                   ),),
                  
                 ),
+                const SizedBox(height: 50),
                 DropdownButton<String>(
+                  iconSize: 50,
+                  style: const TextStyle(fontSize: 35, color: Colors.black),
                   value: dropdownValue,
                   items: <String>['4', '5', '6', '7', '8']
                           .map<DropdownMenuItem<String>>((String value) {
@@ -51,11 +53,13 @@ class _ConfiguracionLetrasPantallaState extends State<ConfiguracionLetrasPantall
                         
                       },
                 ),
-                const SizedBox(height: 60),
+                const SizedBox(height: 50),
                 SizedBox(
                   height: 60,
                   width: 60,
-                  child: FloatingActionButton(
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: FloatingActionButton(
                     backgroundColor: Theme.of(context).primaryColorDark,
                     child: Icon(
                       Icons.arrow_back,
@@ -66,6 +70,7 @@ class _ConfiguracionLetrasPantallaState extends State<ConfiguracionLetrasPantall
                       Navigator.pop(context);
                     }
                   ),
+                )
                 )
               ],
             ),
