@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordle/widget_teclado.dart';
 
 class PlayingPantalla extends StatefulWidget {
   PlayingPantalla({Key? key}) : super(key: key);
@@ -14,18 +15,9 @@ class _PlayingPantallaState extends State<PlayingPantalla> {
       body: Container(
         alignment: Alignment.center,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Column(
-              children: [
-                Text('Zona de juegos',style: Theme.of(context).primaryTextTheme.displaySmall),
-                /*DropdownButton(
-                  value: context
-                  items: Items,
-                  onChanged: (){}
-                )*/
-              ],
-            ),
+            WidgetTeclado(),
             Container(
               height: 60,
               width: 60,
