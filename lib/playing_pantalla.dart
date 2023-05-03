@@ -1,4 +1,6 @@
+import 'package:wordle/wordle_logica.dart';
 import 'package:flutter/material.dart';
+import 'package:wordle/widget_teclado.dart';
 
 class PlayingPantalla extends StatefulWidget {
   PlayingPantalla({Key? key}) : super(key: key);
@@ -8,23 +10,25 @@ class PlayingPantalla extends StatefulWidget {
 }
 
 class _PlayingPantallaState extends State<PlayingPantalla> {
+  WordleLogica _partida = WordleLogica();
+
+  @override
+  void initState() {
+    super.initState();
+    WordleLogica.iniciarWordle();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Column(
-              children: [
-                Text('Zona de juegos',style: Theme.of(context).primaryTextTheme.displaySmall),
-                /*DropdownButton(
-                  value: context
-                  items: Items,
-                  onChanged: (){}
-                )*/
-              ],
+            WidgetTeclado(_partida),
+            SizedBox(
+              height: 30.0,
             ),
             Container(
               height: 60,
