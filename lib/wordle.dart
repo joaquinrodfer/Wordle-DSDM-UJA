@@ -8,6 +8,7 @@ class Wordle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Wordle',
       theme: WordleTema.claro(),
       darkTheme: WordleTema.oscuro(),
