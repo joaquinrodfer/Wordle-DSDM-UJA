@@ -1,17 +1,76 @@
 import 'package:flutter/material.dart';
+import 'package:wordle/configuracion_opcion.dart';
+import 'configuracion_letras_pantalla.dart';
+import 'package:wordle/configuracion_intentos_pantalla.dart';
 
-class ConfiguracionPantalla extends StatefulWidget {
-  const ConfiguracionPantalla({Key? key}) : super(key: key);
+class ConfiguracionPantalla extends StatelessWidget {
+  final _longitudPalabra = [4,5,6];
+  int _idLongitudPalabras = 0;
+  final _numeroIntentos = [4,5,6,7,8];
+  int _idNumeroIntentos = 0;
 
-  @override
-  State<ConfiguracionPantalla> createState() => _ConfiguracionPantallaState();
-}
+  final _opciones = <ConfiguracionOpcion>[
+    const ConfiguracionOpcion(
+      titulo: 'Número de letras',
+      descripcion: 'Número de letras que tendrás que averiguar por cada palabra',
+    ),
+    const ConfiguracionOpcion(
+      titulo: 'Número de intentos',
+      descripcion: 'Número de intentos para resolver la palabra',
+    ),
+  ];
 
-class _ConfiguracionPantallaState extends State<ConfiguracionPantalla> {
+  ConfiguracionPantalla({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return const Center(
-            child: Text('Pagina configuración en progreso⚙')
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Container(
+            child: Icon(
+              Icons.settings,
+              color: Theme.of(context).primaryColorDark,
+              size: 40,
+            )
+        ),
+        elevation: 0,
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            InkWell(
+              child: _opciones[0],
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) {
+                          return ConfiguracionLetrasPantalla();
+                        }
+                    )
+                );
+              },
+            ),
+            const SizedBox(height: 5,),
+            InkWell(
+              child: _opciones[1],
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return ConfiguracionIntentosPantalla();
+                    })
+                );
+              },
+            ),
+          ],
+        )
+      ),
     );
   }
 }
+

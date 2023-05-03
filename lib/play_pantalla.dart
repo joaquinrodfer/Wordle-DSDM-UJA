@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordle/playing_pantalla.dart';
 
 class PlayPantalla extends StatefulWidget {
   const PlayPantalla({Key? key}) : super(key: key);
@@ -8,15 +9,10 @@ class PlayPantalla extends StatefulWidget {
 }
 
 class _PlayPantallaState extends State<PlayPantalla> {
-  final _longitudPalabra = [4,5,6];
-  int _idLongitudPalabras = 0;
-  final _numeroIntentos = [4,5,6,7,8];
-  int _idNumeroIntentos = 0;
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Container(
         alignment: Alignment.center,
           child: Column(
@@ -34,7 +30,16 @@ class _PlayPantallaState extends State<PlayPantalla> {
                   child: FloatingActionButton(
                       elevation: 5,
                       highlightElevation: 20,
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                            MaterialPageRoute(
+                                builder: (context) {
+                                  return PlayingPantalla();
+                                }
+                            )
+                        );
+                      },
                       child: Icon(Icons.play_arrow,size: 100,color: Theme.of(context).iconTheme.color, )
                   )
               ),
