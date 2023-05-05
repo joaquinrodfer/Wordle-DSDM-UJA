@@ -8,7 +8,7 @@ class WordleTema {
       color: Colors.grey[850]
     ),
     displayLarge: GoogleFonts.notoSerifGeorgian(
-      fontSize: 64.0,
+      fontSize: 70.0,
       fontWeight: FontWeight.w900,
       color: Colors.grey[850],
     ),
@@ -35,12 +35,12 @@ class WordleTema {
       color: Colors.white,
     ),
     displayLarge: GoogleFonts.notoSerifGeorgian(
-      fontSize: 48.0,
+      fontSize: 70.0,
       fontWeight: FontWeight.w900,
       color: Colors.white,
     ),
     displayMedium: GoogleFonts.notoSerifGeorgian(
-      fontSize: 30.0,
+      fontSize: 24.0,
       fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
@@ -85,6 +85,7 @@ class WordleTema {
       brightness: Brightness.light,
       primaryColor: Colors.white,
       primaryColorDark: Colors.grey[850],
+      backgroundColor: Colors.grey[400],
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
         titleTextStyle: TextStyle(
@@ -114,6 +115,7 @@ class WordleTema {
       brightness: Brightness.dark,
       primaryColor: Colors.grey[850],
       primaryColorDark: Colors.white,
+      backgroundColor: Colors.grey.shade800,
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.grey[850],
         titleTextStyle: TextStyle(

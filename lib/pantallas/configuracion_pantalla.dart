@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wordle/configuracion_opcion.dart';
-import 'configuracion_letras_pantalla.dart';
-import 'package:wordle/configuracion_intentos_pantalla.dart';
+import 'package:wordle/widgets/configuracion_opcion.dart';
+import 'package:wordle/pantallas/pantallas.dart';
 
 class ConfiguracionPantalla extends StatelessWidget {
   final _longitudPalabra = [4,5,6];

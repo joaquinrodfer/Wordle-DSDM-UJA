@@ -32,7 +32,8 @@ class ConfiguracionOpcion extends StatelessWidget {
                         titulo,
                         style: TextStyle(
                             color: Theme.of(context).primaryTextTheme.displaySmall?.color,
-                            fontSize: Theme.of(context).primaryTextTheme.displaySmall?.fontSize
+                            fontSize: Theme.of(context).primaryTextTheme.displaySmall?.fontSize,
+                            fontFamily: Theme.of(context).primaryTextTheme.displaySmall?.fontFamily
                         ),
                       ),
                       RichText(

@@ -1,8 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'puntuaciones_pantalla.dart';
-import 'play_pantalla.dart';
-import 'configuracion_pantalla.dart';
+import 'package:wordle/pantallas/pantallas.dart';
 
 class WordlePaginaPrincipal extends StatefulWidget {
   const WordlePaginaPrincipal({Key? key}) : super(key: key);
