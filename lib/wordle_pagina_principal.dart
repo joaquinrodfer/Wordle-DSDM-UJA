@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:wordle/pantallas/pantallas.dart';
+import 'package:wordle/utils/utils.dart';
 
 class WordlePaginaPrincipal extends StatefulWidget {
   const WordlePaginaPrincipal({Key? key}) : super(key: key);
@@ -38,26 +39,14 @@ class _WordlePaginaPrincipalState extends State<WordlePaginaPrincipal> {
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.ease,
         animationDuration: Duration(milliseconds: 350),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor!,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         color: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
         height: 60,
         index: _categoriaActiva,
-        items: <Widget>[
-          Icon(
-              Icons.military_tech_outlined,
-              size: 40,
-              color: Theme.of(context).bottomNavigationBarTheme.selectedItemColor
-          ),
-          Icon(
-              Icons.play_circle_outline_outlined,
-              size: 40,
-              color: Theme.of(context).bottomNavigationBarTheme.selectedItemColor
-          ),
-          Icon(
-            Icons.settings,
-            size: 40,
-            color: Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
-          ),
+        items: const <Widget>[
+          IconBNB(icon: Icons.military_tech_outlined),
+          IconBNB(icon: Icons.play_circle_outline_outlined),
+          IconBNB(icon: Icons.settings),
         ],
         onTap: _alPulsar,
       ),
