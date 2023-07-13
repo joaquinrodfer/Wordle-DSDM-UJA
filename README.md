@@ -3,7 +3,7 @@
 - Proyecto para la asignatura _Desarrollo de Software para Dispositivos Móviles_ de la Universidad de Jaén 🇪🇸
 - Desarrollado utilizando el framework Flutter, utilizando el lenguaje de programación Dart 📲
 
-## Getting Started
+## Descripción
 
 Este proyecto consiste en realizar una versión para móviles del popular juego Wordle. El juego trata de averiguar una palabra diaria mediante la posición de sus letras en un número de intentos determinados.
 
