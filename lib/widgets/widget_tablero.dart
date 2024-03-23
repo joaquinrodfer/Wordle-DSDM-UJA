@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 
 class WidgetTablero extends StatefulWidget {
   WidgetTablero(this.partida, this.nLetras, this.nIntentos, {Key? key}) : super(key: key) {
-    if(nLetras == 6 || nIntentos >= 7) {
-      multiplo = 0.7;
-    } else {
-      multiplo = 1;
-    }
+    multiplo = 0.9;
   }
 
   WordleLogica partida;
@@ -31,8 +27,8 @@ class _WidgetTableroState extends State<WidgetTablero> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: e.map((e) => Container(
           padding: EdgeInsets.all(16.0 * widget.multiplo / MediaQuery.of(context).size.width),
-          width: MediaQuery.of(context).size.width/6.5 * widget.multiplo,
-          height: MediaQuery.of(context).size.width/6.5 * widget.multiplo,
+          width: MediaQuery.of(context).size.width/6.5 * widget.multiplo - widget.partida.getNIntentos(),
+          height: MediaQuery.of(context).size.width/6.5 * widget.multiplo - widget.partida.getNIntentos(),
           margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(2.0),
@@ -44,7 +40,7 @@ class _WidgetTableroState extends State<WidgetTablero> {
           child: Center(
             child: Text(
               e.letra!, style: TextStyle(
-                color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.08, fontWeight: FontWeight.bold
+                color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.07, fontWeight: FontWeight.bold
               ),
             ),
           ),
