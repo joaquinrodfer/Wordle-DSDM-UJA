@@ -1,16 +1,10 @@
-# wordle
+# Wordle 🟩🟨🟥
 
-A new Flutter project.
+- Proyecto para la asignatura _Desarrollo de Software para Dispositivos Móviles_ de la Universidad de Jaén 🇪🇸
+- Desarrollado utilizando el framework Flutter, utilizando el lenguaje de programación Dart 📲
 
-## Getting Started
+## Descripción
 
-This project is a starting point for a Flutter application.
+Este proyecto consiste en realizar una versión para móviles del popular juego Wordle. El juego trata de averiguar una palabra diaria mediante la posición de sus letras en un número de intentos determinados.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Nuestra versión permite rejugar tantas veces como el usuario desee, además de poder modificar número de letras y de intentos a su antojo.
